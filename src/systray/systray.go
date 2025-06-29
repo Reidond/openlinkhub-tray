@@ -346,11 +346,11 @@ Please use KDE Plasma, GNOME, XFCE, or another supported desktop.`)
 					},
 					{
 						Name: "Event", Args: []introspect.Arg{
-						{Name: "id", Type: "i", Direction: "in"},
-						{Name: "eventId", Type: "s", Direction: "in"},
-						{Name: "data", Type: "v", Direction: "in"},
-						{Name: "timestamp", Type: "u", Direction: "in"},
-					},
+							{Name: "id", Type: "i", Direction: "in"},
+							{Name: "eventId", Type: "s", Direction: "in"},
+							{Name: "data", Type: "v", Direction: "in"},
+							{Name: "timestamp", Type: "u", Direction: "in"},
+						},
 					},
 				},
 				Signals: []introspect.Signal{
