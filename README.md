@@ -1,5 +1,7 @@
 # openlinkhub-tray
-Linux system tray application for OpenLinkHub
+Linux system tray application for OpenLinkHub.
+- This was tested on KDE and GNOME. 
+- Cinnamon does not work due to incomplete `com.canonical.dbusmenu` implementation. 
 
 ### 1. Build & install
 ```bash
