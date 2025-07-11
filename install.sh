@@ -38,9 +38,9 @@ cat > "$CONFIG_DIR/systemd/user/openlinkhub-tray.service" <<EOF
 [Unit]
 Description=OpenLinkHub System Tray Application
 After=graphical-session.target network-online.target
-ExecCondition=/bin/bash -c 'code=\$(curl -s -f http://127.0.0.1:27003/api/ | jq -r .code) && [ "\$code" = "200" ]'
 
 [Service]
+ExecCondition=/bin/bash -c 'code=\$(curl -s -f http://127.0.0.1:27003/api/ | jq -r .code) || exit 1; [ "\$code" = "200" ] || exit 1'
 ExecStart=$BIN_DIR/openlinkhub_tray -ip 127.0.0.1 -port 27003
 Restart=on-failure
 
